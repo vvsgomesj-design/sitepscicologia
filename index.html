@@ -5,128 +5,433 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priorizar-se Psicologia</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
         .heading-app { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
+    <!-- Menu de Navegação Atualizado -->
+<ul class="flex gap-8 font-medium text-slate-700">
+    <li><a href="#inicio" class="hover:text-teal-600 transition">Início</a></li>
+    <li><a href="#quem-somos" class="hover:text-teal-600 transition">Quem Somos</a></li>
+    <li><a href="#profissionais" class="hover:text-teal-600 transition">Nossos Profissionais</a></li>
+    <li><a href="#espaco" class="hover:text-teal-600 transition">Nosso Espaço</a></li>
+    <li><a href="#plantao" class="font-bold text-teal-700 hover:text-teal-800 transition underline decoration-2 underline-offset-4">Plantão Psicológico</a></li>
+</ul>
 </head>
-<body class="text-slate-800 antialiased selection:bg-teal-50 relative pb-12">
+<body class="text-slate-800">
 
-    <div class="bg-slate-900 text-white py-2 px-3 sticky top-0 z-50 text-xs sm:text-sm flex items-center justify-between border-b border-slate-800">
-        <div class="flex items-center gap-1.5 max-w-[70%]">
-            <i data-lucide="accessibility" class="w-4 h-4 text-teal-400 shrink-0"></i>
-            <span class="truncate">Selecione o texto e clique ao lado para ouvir</span>
-        </div>
-        <button onclick="lerTextoSelecionado()" class="bg-teal-600 hover:bg-teal-500 text-white font-medium px-2.5 py-1 rounded-lg flex items-center gap-1 transition-all active:scale-95 text-xs shadow-xs">
-            <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> <span>Ouvir</span>
-        </button>
-    </div>
-
-    <header class="sticky top-[33px] sm:top-[37px] z-40 backdrop-blur-md bg-white/80 border-b border-slate-100">
-        <div class="max-w-5xl mx-auto px-3 sm:px-4 h-16 sm:h-24 flex items-center justify-between gap-2">
-            <div class="flex items-center gap-1.5 sm:gap-3 h-full shrink-0">
-                <img class="h-10 sm:h-20 w-auto object-contain py-0.5" src="logo.png" alt="Priorizar Logo">
-                <span class="heading-app font-bold text-slate-900 text-sm sm:text-xl md:text-2xl tracking-tight whitespace-nowrap">Priorizar-se</span>
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img class="h-12 w-auto" src="logo.png" alt="Logo">
+                <span class="heading-app font-bold text-slate-900 text-3xl tracking-tight">Priorizar-se</span>
             </div>
-            <nav class="hidden md:flex items-center bg-slate-100 p-1.5 rounded-xl text-base font-medium text-slate-600">
-                <a href="#inicio" class="px-4 py-2 rounded-lg hover:text-slate-900">Início</a>
-                <a href="#sobre" class="px-4 py-2 rounded-lg hover:text-slate-900">Quem Somos</a>
-                <a href="#servicos" class="px-4 py-2 rounded-lg hover:text-slate-900">Serviços</a>
-                <a href="#profissionais" class="px-4 py-2 rounded-lg hover:text-slate-900">Profissionais</a>
-                <a href="#espaco" class="px-4 py-2 rounded-lg hover:text-slate-900">Nosso Espaço</a>
-            </nav>
-            <a href="https://wa.me/5562983147237" target="_blank" class="px-3 sm:px-5 py-2 sm:py-3 bg-teal-600 text-white rounded-xl text-xs sm:text-base font-semibold hover:bg-teal-700 transition-all flex items-center gap-1.5 shrink-0">
-                <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 h-5"></i> <span>Agendar</span>
-            </a>
+            <a href="https://wa.me/5562983147237" target="_blank" class="px-6 py-2 bg-teal-600 text-white rounded-xl font-semibold hover:bg-teal-700">Agendar</a>
         </div>
     </header>
+<section id="inicio" class="py-20 px-8 bg-white max-w-[1400px] mx-auto">
+    <!-- Título da Seção -->
+    <h2 class="text-3xl font-bold text-teal-800 mb-8 uppercase tracking-wider">Início</h2>
 
-    <main class="max-w-4xl mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-8 sm:space-y-12">
-        <section id="inicio" class="bg-white border border-slate-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xs relative overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center">
-                <div class="md:col-span-7 space-y-2 sm:space-y-4 text-center md:text-left order-2 md:order-1">
-                    <h1 class="heading-app text-2xl sm:text-4xl font-bold text-slate-900 leading-tight">Cuidado humanizado e individualizado.</h1>
-                    <p class="text-sm sm:text-base text-slate-600 font-light max-w-md mx-auto md:mx-0">Priorizar-se Espaço de Psicologia: Cuidando de você em cada etapa da sua jornada.</p>
-                </div>
-                <div class="md:col-span-5 flex justify-center order-1 md:order-2">
-                    <div class="relative w-36 sm:w-full max-w-[220px] aspect-square rounded-full overflow-hidden border-4 border-teal-50 shadow-md">
-                        <img class="w-full h-full object-cover" src="foto-silviane.png" alt="Dra. Silviane Rocha">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+        <!-- Coluna de Texto -->
+        <div class="flex-1 space-y-6">
+            <!-- Frase de destaque -->
+            <h1 class="text-5xl font-bold text-slate-900 leading-tight">
+                Priorizar-se Espaço de Psicologia: <span class="text-teal-700">Cuidando de você em cada etapa da sua jornada.</span>
+            </h1>
+
+            <div class="prose prose-lg text-slate-600">
+                <p class="font-semibold text-xl text-teal-800"></p>
+                <p>
+                    A Priorizar-se Espaço de Psicologia nasceu com o propósito de promover saúde, equilíbrio emocional e qualidade de vida por meio de um <strong>cuidado humanizado, multidisciplinar e individualizado</strong>.
+                </p>
+                <p>
+                    Contamos com profissionais especializados em psicanálise, psicologia, neuropsicologia, psiquiatria, psicopedagogia e nutrição, oferecendo atendimento para crianças, adolescentes, adultos e famílias, com diferentes abordagens terapêuticas, respeitando a singularidade e as necessidades de cada pessoa.
+                </p>
+                <p>
+                    Nosso trabalho é voltado tanto para a prevenção e promoção da saúde quanto para avaliação, diagnóstico, tratamento e acompanhamento contínuo, auxiliando cada indivíduo em seu desenvolvimento emocional, cognitivo, comportamental e relacional.
+                </p>
+                <p>
+                    Acreditamos que priorizar-se é um ato de cuidado, consciência e transformação. Por isso, buscamos construir um espaço acolhedor, ético e seguro, onde cada pessoa possa encontrar suporte para desenvolver sua melhor versão.
+                </p>
+            </div>
+        </div>
+
+        <!-- Coluna da Imagem (Dra. Silviane) -->
+        <div class="flex-shrink-0">
+            <img src="espaco3.png" class="w-[400px] h-[400px] rounded-3xl object-cover shadow-2xl border-8 border-teal-50" alt="Dra. Silviane">
+        </div>
+    </div><!-- Nova Seção: Quem Somos -->
+<section id="quem-somos" class="py-20 px-8 bg-slate-50">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-slate-900 mb-10 text-center">Quem Somos</h2>
+        <div class="prose prose-lg text-slate-600 mx-auto space-y-6 leading-relaxed">
+            <p>
+                A Priorizar-se Psicologia nasceu de um propósito profundo em meu coração: um chamado para cuidar de pessoas e da saúde mental. Um projeto que reconheço como vindo do coração de Deus e que ganhou forma durante minha pós-graduação em Avaliação Psicológica.
+            </p>
+            <p>
+                Sonhei com um espaço em que as pessoas pudessem se priorizar, olhar para si com mais cuidado e responsabilidade, não apenas quando o sofrimento já está intenso, mas também na prevenção e na construção de uma vida emocional mais saudável ao longo do tempo.
+            </p>
+            <p>
+                A Priorizar-se foi pensada como um lugar de evolução: um ambiente acolhedor, ético e profissional, onde o autoconhecimento, a avaliação psicológica e o acompanhamento terapêutico contribuem para que cada pessoa desenvolva recursos internos, fortaleça sua história e caminhe com mais equilíbrio.
+            </p>
+            <p>
+                Meu compromisso, como psicóloga Silviane Rocha (CRP 13/574), é oferecer um espaço de escuta qualificada, respeito e sigilo, unindo conhecimento técnico à sensibilidade no cuidado com cada pessoa que chega até aqui.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+</section>
+    <main class="max-w-5xl mx-auto px-4 py-12 space-y-20">
+
+        <section class="flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 space-y-6">
+                <h1 class="text-5xl font-bold text-slate-900 leading-tight">Cuidado humanizado e individualizado.</h1>
+                <p class="text-xl text-slate-600"> Cuidando de você em cada etapa da sua jornada.</p>
+            </div>
+            <div class="flex-shrink-0">
+                <img src="foto-silviane.png" class="w-80 h-80 rounded-3xl object-cover shadow-2xl" alt="Dra. Silviane">
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-teal-700 mb-2">Missão</h3>
+                <p class="text-sm text-slate-600">Promover saúde emocional e qualidade de vida por meio de atendimento humanizado.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-teal-700 mb-2">Visão</h3>
+                <p class="text-sm text-slate-600">Ser referência em cuidado multidisciplinar, impactando vidas através de práticas éticas.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-teal-700 mb-2">Propósito</h3>
+                <p class="text-sm text-slate-600">Ajudar pessoas a se priorizarem, fortalecendo o equilíbrio e bem-estar emocional.</p>
+            </div>
+        </section>
+<!-- O grid-cols-2 fixo garante que sempre teremos 2 colunas lado a lado -->
+<section id="profissionais" class="py-20 px-8 bg-slate-50">
+    <div class="max-w-[1600px] mx-auto">
+        <h2 class="heading-app text-5xl font-bold text-center mb-20 text-slate-900">Nossos Profissionais</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
+    
+                    
+            <!-- 1. Silviane -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-silviane.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Silviane">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Silviane</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP a confirmar</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Atendimento Clínico</p>
+                        <p>• Psicologia Humanizada</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="sobre" class="bg-white border border-slate-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xs space-y-4 sm:space-y-6">
-            <h2 class="heading-app text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">Quem somos?</h2>
-            <div class="space-y-3 sm:space-y-4 text-sm sm:text-base text-slate-600 font-light leading-relaxed">
-                <p>A <strong class="font-semibold text-teal-700">Priorizar-se Psicologia</strong> nasceu de um propósito profundo em meu coração: um chamado para cuidar de pessoas e da saúde mental.</p>
-                <p>Sonhei com um espaço em que as pessoas pudessem se priorizar, olhar para si com mais cuidado e responsabilidade, não apenas quando o sofrimento já está intenso.</p>
-                <p>Meu compromisso, como psicóloga <strong class="text-slate-900">Silviane Rocha (CRP 13/574)</strong>, é oferecer um espaço de escuta qualificada, respeito e sigilo.</p>
-            </div>
-        </section>
-
-        <section id="profissionais" class="space-y-4">
-            <div class="text-center px-4">
-                <h2 class="heading-app text-xl sm:text-2xl font-bold text-slate-900">Nossos Especialistas</h2>
-                <p class="text-xs sm:text-sm text-slate-500 font-light">Arraste para o lado para ver nossa equipe</p>
-            </div>
-            <div class="flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-x-auto no-scrollbar snap-x pb-4 -mx-3 px-3">
-                <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center min-w-[270px] snap-center">
-                    <h3 class="font-bold">Equipe Multidisciplinar</h3>
-                    <p class="text-xs text-slate-500">Psicologia, Neuropsicologia e mais.</p>
+            <!-- 2. Carla -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-carla.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Carla">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Carla Mariane</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 09/15302</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Psicoterapia Fenomenológica</p>
+                        <p>• Manejo de Estresse</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- 3. Goreth -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-goreth.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Goreth">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Goreth Marques</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Neuropsicopedagoga</p>
+                    <p class="text-sm text-slate-400 font-medium">CBO 2394-40</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Intervenção em TEA/TDAH</p>
+                        <p>• Neurodesenvolvimento</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Isadora Costa -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-isadora.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Isadora">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Isadora Costa</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 09/17414</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Terapia Infantil e Hebiatria</p>
+                        <p>• Orientação de Pais</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Tamyres -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-tamyres.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Tamyres">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Tamyres</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Nutricionista</p>
+                    <p class="text-sm text-slate-400 font-medium">Esportiva e Comportamental</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Reeducação Alimentar e Emagrecimento</p>
+                        <p>• Compulsão e Seletividade Alimentar</p>
+                        <p>• Bioimpedância | Atendimento Online e Presencial</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Jordana S. Marques -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-jordana.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Jordana">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Jordana S. Marques</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 09/19293</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Psicoterapia Adultos</p>
+                        <p>• Luto e Autoestima</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Lusdalva -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-lusdalva.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Lusdalva">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Lusdalva Lemes</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 09/21096</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Psicologia da Saúde</p>
+                        <p>• Pacientes Crônicos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Marcia -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-marcia.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Marcia">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Marcia</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP a confirmar</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Atendimento Clínico</p>
+                        <p>• Saúde Mental</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Marcos -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-marcos.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Marcos">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Marcos</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicólogo</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP a confirmar</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Atendimento Clínico</p>
+                        <p>• Saúde Mental</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Marilda -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-marilda.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Marilda">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Marilda Amâncio</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga Clínica</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 09/011745</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Ansiedade e Autoestima</p>
+                        <p>• Dependência Emocional</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Patric -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-patric.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Patric">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Patric Vasconcelos</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Neuropsicólogo</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 09/015388</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Avaliação Neuropsicológica</p>
+                        <p>• Diagnóstico TDAH e Autismo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Tammy Avelino -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-tammy.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Tammy">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Tammy Avelino</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga/Neuro</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP 21/01800</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Avaliação Neuropsicológica</p>
+                        <p>• Investigação TEA e TDAH</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. Vanda -->
+            <div class="flex items-center gap-8 bg-white p-10 rounded-3xl border border-slate-100 shadow-lg w-full">
+                <img src="avatar-vanda.png" class="w-40 h-40 rounded-full object-cover border-4 border-teal-50 shrink-0" alt="Vanda">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-3xl font-bold text-slate-900">Vanda</h3>
+                    <p class="text-lg text-teal-700 font-bold uppercase tracking-wide">Psicóloga</p>
+                    <p class="text-sm text-slate-400 font-medium">CRP a confirmar</p>
+                    <div class="mt-4 pt-4 border-t border-slate-100 text-lg text-slate-600 space-y-1">
+                        <p>• Atendimento Clínico</p>
+                        <p>• Saúde Mental</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        </section>
+
+        <section id="espaco">
+            <h2 class="text-3xl font-bold text-center mb-8">Nosso Espaço</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <img src="espaco-1.png" class="rounded-2xl w-full h-64 object-cover">
+                <img src="espaco-2.png" class="rounded-2xl w-full h-64 object-cover">
+                <img src="espaco-3.png" class="rounded-2xl w-full h-64 object-cover">
             </div>
         </section>
     </main>
+<!-- Seção Plantão Psicológico -->
+<section id="plantao" class="py-20 px-8 bg-teal-50">
+    <div class="max-w-[1000px] mx-auto text-center">
+        <!-- Nome da seção destacado -->
+        <h2 class="text-sm font-black text-teal-600 uppercase tracking-widest mb-4">Plantão Psicológico</h2>
+        <h3 class="text-5xl font-bold text-teal-900 mb-8">Precisando de apoio emocional?</h3>
+        
+        <p class="text-xl text-slate-700 mb-12 leading-relaxed">
+            Agora a <strong>Priorizar-se Espaço de Psicologia</strong> conta com o <strong>Plantão Psicológico</strong>, um atendimento pensado para acolher você nos momentos em que mais precisa de escuta, orientação e suporte emocional imediato.Agendamento rápido e prático pelo nosso site
+Atendimento online e presencial
 
-    <footer class="bg-white border-t border-slate-100 py-6 sm:py-8">
-        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center md:text-left">
-            <div class="space-y-2 flex flex-col items-center md:items-start">
-                <img src="logo.png" class="h-12 w-auto object-contain" alt="Logo">
-            </div>
+Não espere a situação se agravar. Cuide da sua saúde mental hoje mesmo.
+Agende seu Plantão Psicológico 💙
+
+
+A psicoterapia é um espaço seguro, acolhedor e sigiloso para compreender emoções, desenvolver habilidades emocionais, fortalecer a autoestima, melhorar relacionamentos e enfrentar desafios da vida com mais equilíbrio e bem-estar.
+
+Priorizar Espaço de Psicologia
+Cuidando de você em cada etapa da sua jornada.
+        </p>
+
+        <!-- Formulário integrado ao Plantão -->
+        <div id="agendamento-plantao" class="max-w-[800px] mx-auto bg-white p-12 rounded-3xl border border-teal-100 shadow-xl">
+            <h4 class="text-2xl font-bold text-teal-900 mb-2">Solicite seu Plantão</h4>
+            <p class="text-slate-500 mb-8">Preencha abaixo para agendar seu atendimento exclusivo do Plantão Psicológico.</p>
             
-            <div class="space-y-2">
-                <h4 class="heading-app font-bold text-xs sm:text-sm">Contatos</h4>
-                <div class="flex flex-col items-center md:items-start gap-1.5">
-                    <a href="https://wa.me/5562983147237" class="flex items-center gap-2 text-slate-600 hover:text-teal-600"><i data-lucide="phone" class="w-3.5 h-3.5"></i> (62) 98314-7237</a>
+            <form action="https://wa.me/55SEUNUMERO" method="GET" target="_blank" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Nome Completo</label>
+                    <input type="text" name="name" class="w-full p-4 rounded-xl border border-slate-200" placeholder="Seu nome" required>
                 </div>
-            </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">E-mail</label>
+                    <input type="email" name="email" class="w-full p-4 rounded-xl border border-slate-200" placeholder="seu@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Mensagem</label>
+                    <textarea name="message" class="w-full p-4 rounded-xl border border-slate-200 h-32" placeholder="Descreva brevemente sua necessidade para o plantão, retorno por e-mail ou whatsaap..." required></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-teal-600 text-white p-5 rounded-xl font-bold text-lg hover:bg-teal-700 transition flex justify-center items-center gap-2">
+                    Enviar solicitação para o Plantão via WhatsAAp 💙
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+</form>
 
-            <div class="space-y-2">
-                <h4 class="heading-app font-bold text-xs sm:text-sm">Localização</h4>
-                <a href="#" class="flex flex-col items-center md:items-start text-xs sm:text-sm text-slate-600 hover:text-teal-600 group">
-                    <div class="flex items-center gap-1.5 mb-1">
-                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i>
-                        <span class="font-semibold text-slate-900 group-hover:text-teal-600">Priorizar-se Psicologia</span>
-                    </div>
-                    <p class="font-light text-slate-500">Goiânia, Goiás, Brasil</p>
-                </a>
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center">
+            <img src="logo.png" class="h-20 brightness-0 invert">
+            <div class="space-y-3">
+                <a href="https://wa.me/5562983147237" target="_blank" class="flex items-center gap-2 text-sm hover:text-teal-400"><i data-lucide="phone" class="w-4 h-4"></i> (62) 98314-7237</a>
+                <a href="https://instagram.com/priorizarsepsicologia" target="_blank" class="flex items-center gap-2 text-sm hover:text-teal-400"><i data-lucide="instagram" class="w-4 h-4"></i> @priorizarsepsicologia</a>
             </div>
+           <a href="https://www.google.com/maps/search/?api=1&query=Edificio+Anhanguera+Avenida+Anhanguera+esquina+com+Avenida+Tocantins+5389+Centro+Goiania+GO" target="_blank" class="flex items-start gap-2 hover:text-teal-400">
+    <i data-lucide="map-pin" class="w-5 h-5 text-teal-500 shrink-0 mt-1"></i>
+    <p class="text-sm">
+        Av. Anhanguera, esq. com Av. Tocantins, 5389<br>
+        Edifício Anhanguera - Centro<br>
+        Goiânia - GO, CEP: 74043-010, Brasil
+    </p>
+</a>
         </div>
     </footer>
 
+    <script>lucide.createIcons();</script>
+<!-- Botão Flutuante posicionado mais acima -->
+<a href="https://wa.me/5562983147237" 
+   target="_blank" 
+   class="fixed bottom-40 right-12 z-50 flex items-center gap-3 bg-green-500 text-white px-6 py-4 rounded-full shadow-lg hover:bg-green-600 transition-all transform hover:scale-105">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="font-semibold text-lg">Precisa de ajuda?</span>
+</a>
+<!-- SEÇÃO DE ACESSIBILIDADE -->
+    
+    <!-- 1. Widget de Libras (VLibras) -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-        lucide.createIcons();
+    </script>
 
-        function lerTextoSelecionado() {
+    <!-- 2. Botão de Áudio (Leitura de texto com tecnologia do navegador) -->
+    <div class="fixed bottom-24 right-8 z-50">
+        <button onclick="lerPagina()" class="bg-teal-600 hover:bg-teal-700 text-white p-4 rounded-full shadow-lg transition-all flex items-center gap-2">
+            <span>🔊</span> <span class="font-bold">Ouvir Página</span>
+        </button>
+    </div>
+  
+        <script>
+        function lerPagina() {
+            // Cancela qualquer fala anterior
             window.speechSynthesis.cancel();
-            let texto = window.getSelection().toString() || "Bem-vindo à Priorizar-se.";
-            const utterance = new SpeechSynthesisUtterance(texto);
-            utterance.lang = 'pt-BR';
-            window.speechSynthesis.speak(utterance);
+            
+            // Verifica se o usuário selecionou algum texto com o mouse
+            const selecao = window.getSelection().toString();
+            
+            // Se houver texto selecionado, lê apenas ele. Se não, lê o parágrafo principal ou avisa o usuário.
+            if (selecao.length > 0) {
+                const fala = new SpeechSynthesisUtterance(selecao);
+                fala.lang = 'pt-BR';
+                window.speechSynthesis.speak(fala);
+            } else {
+                alert("Por favor, selecione um trecho do texto com o mouse para que eu possa ler!");
+            }
         }
     </script>
+   
+
 </body>
 </html>
