@@ -12,7 +12,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
         .heading-app { font-family: 'Plus Jakarta Sans', sans-serif; }
-        /* Esconde a barra de rolagem horizontal padrão no carrossel mobile */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -30,7 +29,7 @@
         </button>
     </div>
 
-    <!-- NAVIGATION BANNER - ULTRA ALINHADO E COMPACTO NO MOBILE -->
+    <!-- NAVIGATION BANNER -->
     <header class="sticky top-[33px] sm:top-[37px] z-40 backdrop-blur-md bg-white/80 border-b border-slate-100">
         <div class="max-w-5xl mx-auto px-3 sm:px-4 h-16 sm:h-24 flex items-center justify-between gap-2">
             <div class="flex items-center gap-1.5 sm:gap-3 h-full shrink-0">
@@ -72,13 +71,13 @@
             <h2 class="heading-app text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">Quem somos?</h2>
             <div class="space-y-3 sm:space-y-4 text-sm sm:text-base text-slate-600 font-light leading-relaxed">
                 <p>A <strong class="font-semibold text-teal-700">Priorizar-se Psicologia</strong> nasceu de um propósito profundo em meu coração: um chamado para cuidar de pessoas e da saúde mental. Um projeto que reconheço como vindo do coração de Deus e que ganhou forma durante minha pós-graduação em Avaliação Psicológica.</p>
-                <p>Sonhei com um espaço em que as pessoas pudessem se priorizar, olhar para si com mais cuidado e responsabilidade, não apenas quando o sofrimento já está intenso, mas também na prevenção e na construção de uma vida emotional mais saudável ao longo do tempo.</p>
+                <p>Sonhei com um espaço em que as pessoas pudessem se priorizar, olhar para si com mais cuidado e responsabilidade, não apenas quando o sofrimento já está intenso, mas também na prevenção e na construção de uma vida emocional mais saudável ao longo do tempo.</p>
                 <p>A Priorizar-se foi pensada como um lugar de evolução: um ambiente acolhedor, ético e profissional, onde o autoconhecimento, a avaliação psicológica e o acompanhamento terapêutico contribuem para que cada pessoa desenvolva recursos internos, fortaleça sua história e caminhe com mais equilíbrio.</p>
                 <p class="pt-2 border-t border-slate-50">Meu compromisso, como psicóloga <strong class="text-slate-900">Silviane Rocha (CRP 13/574)</strong>, é oferecer um espaço de escuta qualificada, respeito e sigilo, unindo conhecimento técnico à sensibilidade no cuidado com cada pessoa que chega até aqui.</p>
             </div>
         </section>
 
-        <!-- MISSÃO, VISÃO E PROPÓSITO (CARROSSEL ADAPTADO NO MOBILE) -->
+        <!-- MISSÃO, VISÃO E PROPÓSITO -->
         <section class="flex sm:grid sm:grid-cols-3 gap-3 overflow-x-auto no-scrollbar snap-x pb-2 -mx-3 px-3 sm:mx-0 sm:px-0">
             <div class="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 space-y-2 shadow-2xs min-w-[260px] sm:min-w-0 snap-center">
                 <div class="w-8 h-8 bg-teal-50 rounded-lg flex items-center justify-center text-teal-600"><i data-lucide="target" class="w-4 h-4"></i></div>
@@ -121,7 +120,7 @@
             </div>
         </section>
 
-        <!-- PROFISSIONAIS: CARROSSEL DESLIZÁVEL NO MOBILE (EVITA ROLAGEM INFINITA PARA BAIXO) -->
+        <!-- PROFISSIONAIS -->
         <section id="profissionais" class="space-y-4">
             <div class="text-center px-4">
                 <h2 class="heading-app text-xl sm:text-2xl font-bold text-slate-900">Nossos Especialistas</h2>
@@ -341,7 +340,7 @@
             </div>
         </section>
 
-        <!-- NOSSO ESPAÇO (RÁPIDO E FLUIDO NO CELULAR COM GRID LATERAL SE PRECISAR) -->
+        <!-- NOSSO ESPAÇO -->
         <section id="espaco" class="space-y-4">
             <div class="text-center">
                 <h2 class="heading-app text-xl sm:text-2xl font-bold text-slate-900">Nosso Espaço</h2>
@@ -360,7 +359,7 @@
             </div>
         </section>
 
-        <!-- MAPA EMBED (MAIS BAIXO NO MOBILE PARA OCUPAR MENOS TELA) -->
+        <!-- MAPA EMBED -->
         <section class="space-y-3">
             <h3 class="heading-app text-sm sm:text-base font-bold text-slate-800">Onde Estamos</h3>
             <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-48 sm:h-64">
@@ -403,12 +402,12 @@
         </div>
     </footer>
 
-    <!-- BOTÃO WHATSAPP FLUTUANTE (AJUSTADO PARA MOBILE) -->
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
     <a href="https://wa.me/5562983147237" target="_blank" class="fixed bottom-4 right-4 z-45 bg-emerald-500 text-white p-3 rounded-full shadow-lg hover:bg-emerald-600 transition-all flex items-center justify-center">
         <i data-lucide="message-circle" class="w-6 h-6"></i>
     </a>
 
-    <!-- ACESSIBILIDADE: COMPONENTE OPCIONAL DO VLIBRAS -->
+    <!-- ACESSIBILIDADE: COMPONENTE DO VLIBRAS (CORRIGIDO PARA SERVIDORES / GITHUB PAGES) -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -417,24 +416,52 @@
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        // Inicialização assíncrona segura do VLibras
+        window.addEventListener('DOMContentLoaded', () => {
+            try {
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            } catch (err) {
+                console.warn('Aguardando carregamento do VLibras:', err);
+            }
+        });
     </script>
 
-    <!-- SCRIPT DE INTERATIVIDADE -->
+    <!-- SCRIPT DE INTERATIVIDADE E ÁUDIO (CORRIGIDO PARA EDGE/CHROME/MOBILE E GITHUB) -->
     <script>
+        // Inicializa os ícones do Lucide
         lucide.createIcons();
 
         function lerTextoSelecionado() {
-            let texto = window.getSelection().toString();
-            if (!texto) {
-                texto = "Priorizar-se Espaço de Psicologia. Selecione qualquer bloco de texto do site para escutar.";
-            }
+            // Cancela leituras anteriores para evitar travamento de filas no navegador
             window.speechSynthesis.cancel();
+
+            // Pega a seleção do usuário
+            let texto = window.getSelection().toString().trim();
+            
+            // Fallback caso não haja texto selecionado (comum em toques mobile rápidos)
+            if (!texto) {
+                const h1Text = document.querySelector('h1')?.innerText || "";
+                const pText = document.querySelector('#inicio p')?.innerText || "";
+                texto = `Priorizar-se Espaço de Psicologia. ${h1Text} ${pText}. Caso queira ouvir outro trecho, selecione qualquer bloco de texto do site.`;
+            }
+
+            // Instancia a API de voz com tratamento rigoroso de parâmetros
             const utterance = new SpeechSynthesisUtterance(texto);
             utterance.lang = 'pt-BR';
-            utterance.rate = 1.1;
+            utterance.rate = 1.0; 
+            utterance.pitch = 1.0;
+
+            // Executa a fala
             window.speechSynthesis.speak(utterance);
         }
+
+        // Destrava a política de reprodução de áudio em navegadores mobile/Edge no primeiro clique na tela
+        document.body.addEventListener('click', function() {
+            if (window.speechSynthesis.speaking) return;
+            const destrava = new SpeechSynthesisUtterance('');
+            destrava.lang = 'pt-BR';
+            window.speechSynthesis.speak(destrava);
+        }, { once: true });
     </script>
 </body>
 </html>
